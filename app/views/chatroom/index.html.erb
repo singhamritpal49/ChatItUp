@@ -1,1 +1,59 @@
-<h1>LOGIN</h1>
+<h2 class="ui center aligned icon header">
+  <i class="circular users icon"></i>
+  Main Menu
+</h2>
+
+<div class="ui two column grid">
+  <div class="twelve wide column">
+    <div class="ui fluid raised card chatui">
+      <div class="content">
+        <div class="ui  feed">
+          <h4 class="ui header">ChatRoom</h4>
+          <div class="event">
+            <div class="content">
+              <div class="summary">
+                <% @messages.each do |message| %>
+                <p>
+                <bold> <%= message.user.username %> </bold>:  <%= message.content %>
+                </p>
+              <% end %>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+      <div class="extra content">
+        <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path) do |f| %>
+          <div class="field">
+            <div class="ui fluid icon input">
+              <%= f.text_field :content %>
+              <%= f.button '<i class="bordered inverted blue edit icon"></i>'.html_safe %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+  <div class="four wide column">
+    <div class="ui fluid raised card chatui">
+      <div class="content">
+        <div class="ui inverted vertical menu">
+          <a class="active item">
+            Home
+          </a>
+          <a class="item">
+            Messages
+          </a>
+          <a class="item">
+            Friends
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

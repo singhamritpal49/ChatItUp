@@ -1,9 +1,11 @@
-class ChatroomController < ApplicationController 
+class ChatroomController < ApplicationController
+  before_action :require_user
 
 
-def index 
-
-end 
+def index
+@messages = Message.all
+@message = Message.new
+end
 
 
 
