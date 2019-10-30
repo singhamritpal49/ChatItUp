@@ -10,17 +10,17 @@
   </head>
 
   <body>
-  <div class="ui small inverted menu">
+  <div class="ui small  menu">
   <div class="ui container">
   <a class="active item">
-    ChatItUp
+    💬 ChatItUp 💬
   </a>
-  <a class="item">
+  <!-- <a class="item">
     Messages
-  </a>
+  </a> -->
   <div class="right menu">
   <div class="ui dropdown item">
-    Account <i class="dropdown icon"></i>
+    ⬇️ <i class="dropdown icon"></i>
     <div class="menu">
       <% if logged_in? %>
         <%= link_to "Logout", logout_path, method: :delete, class: "item" %>
@@ -29,11 +29,13 @@
       <% end %>
     </div>
   </div>
-  <% if !logged_in? %>
+
+  <!-- <% if !logged_in? %>
     <div class="item">
       <%= link_to "Log in", login_path, class: "ui primary button" %>
     </div>
   <% end %>
+  -->
 </div>
   </div>
 </div>

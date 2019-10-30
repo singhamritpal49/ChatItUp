@@ -1,15 +1,15 @@
+<%= image_tag("class.jpg", :alt => "image",:size => "360x280",:class => "classimg")  %>
 <h2 class="ui center aligned large header">
-  Welcome to ChatItUp - <em>Flatiron School Students Chat App</em>
+  ChatItUp - <em>A Flatiron School Students Chat App</em>
 </h2>
 
-<h4 class="ui center aligned medium icon header">
-  <i class="circular blue power off tiny icon"></i>
-  Log in to continue
-</h4>
 
 
-<div class="ui placeholder segment">
-  <div class="ui two column very relaxed stackable grid">
+
+
+<!-- <div class="ui placeholder segment"> -->
+<div class=" segment">
+  <div class="ui  column very relaxed stackable grid">
     <div class="column">
       <%= form_for(:session, html: {class: "ui form", role: "form"}, url: login_path) do |f| %>
         <div class="field">
@@ -28,16 +28,16 @@
         </div>
         <%= f.button "Login", class: "ui blue submit button" %>
       <% end %>
-      
+
     </div>
-    <div class="middle aligned column">
+    <!-- <div class="middle aligned column">
       <div class="ui big blue disabled button">
         <i class="signup icon"></i>
         Sign Up
       </div>
-    </div>
+    </div> -->
   </div>
-  <div class="ui vertical divider">
+  <!-- <div class="ui vertical divider">
     Or
-  </div>
+  </div> -->
 </div>
