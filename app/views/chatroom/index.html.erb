@@ -8,12 +8,12 @@
 <div class="one column grid">
   <div class="twelve wide column">
     <div class="ui fluid raised card chatui">
-      <div class="content scroll">
-        <div class="ui  feed">
+      <div class="content scroll" id="messages">
+        <div class="ui feed" id="message-container">
           <h4 class="ui header">Flatiron Class 06-24-2019</h4>
           <div class="event">
-            <div class="content">
-              <div class="summary">
+            <div class="content" >
+              <div class="summary" >
                 <% @messages.each do |message| %>
                 <p>
                 <bold> <%= message.user.username %> </bold>:  <%= message.content %>
@@ -28,7 +28,7 @@
         </div>
       </div>
       <div class="extra content">
-        <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path) do |f| %>
+        <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path, remote: true) do |f| %>
           <div class="field">
             <div class="ui fluid icon input">
               <%= f.text_field :content %>
