@@ -1,24 +1,13 @@
-# README
+# ChatItUp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Web Application that allows users to send messages to other users
 
-Things you may want to cover:
 
-* Ruby version
+* Designed Rails MVC backend, using SQLite
 
-* System dependencies
+* Utilized WebSockets for real-time communications
 
-* Configuration
+* Implemented authorization with bcrypt
 
-* Database creation
+*  Styled UI with Semantic UI
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
